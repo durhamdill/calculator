@@ -1,4 +1,4 @@
-div {
+/*div {
   width: 50px;
   height: 50px;
   background: blue;
@@ -6,4 +6,117 @@ div {
   text-align: center;
   font-family: sans-serif;
   margin: 5px;
+}
+
+#view {
+  background-color: white;
+  border: 1px solid blue;
+  width: 50px;
+  height: 50px;
+  color: blue;
+}*/
+body {
+  width: 100vh;
+  height: 100vw;
+}
+
+#wrapper {
+  background-image: url("http://i01.i.aliimg.com/img/pb/793/131/268/1285036461876_hz-myalibaba-temp14_802.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /*overflow: hidden;*/
+  justify-content: center;
+  position: fixed;
+  left: -20px;
+  top: -20px;
+  -webkit-perspective: 400;
+}
+
+#calculator {
+  display: grid;
+  margin: 0 auto;
+  width: 300px;
+/*   border: 1px solid blue; */
+  background-color: #D5CDB8;
+  border-radius: 5px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5fr 1fr 3fr 3fr 3fr 3fr;
+  -webkit-box-shadow: 0px 8px 0px gray, 2px 3px 15px rgba(0,0,0,0.62);
+-moz-box-shadow: 0px 8px 0px gray, 2px 3px 15px rgba(0,0,0,0.62);
+box-shadow: 0px 8px 0px gray, 2px 3px 15px rgba(0,0,0,0.62);
+-webkit-transform: rotateX(3deg);
+}
+
+.buttonStyle {
+  background-color: #A39679;
+  color: black;
+  text-align: center;
+  margin: 5px;
+  font-family: monospace;
+  font-size: 1.5em;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+}
+
+.buttonStyle:focus {
+  outline: 0;
+}
+
+#display {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: #D09637;
+  border: 6px solid #B9AEAB;
+  font-family: monospace;
+  color: #78E1CA;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+
+#output {
+  background-color: black;
+  padding: 5px 10px;
+  margin: 10px;
+  flex-basis: 70%;
+  border: 4px solid #B9AEAB;
+  border-radius: 3px;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: #FBA400;
+}
+
+#clear {
+  background-color: #FBA400;
+}
+
+#bar {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: black;
+  color: gray;
+  padding-left: 10px;
+}
+
+#multiply, #divide, #add, #subtract, #modulo, #square {
+  background-color: gray;
 }

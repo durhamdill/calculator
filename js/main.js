@@ -1,31 +1,45 @@
-console.log("talking");
+// number/operator event listeners:
 
-let num4 = document.getElementById("num4");
-num4.addEventListener("click", expression);
+let inputButton = document.getElementsByClassName('inputButton');
 
-let num5 = document.getElementById("num5");
-num5.addEventListener("click", expression);
+for (i=0; i<inputButton.length; i++) {
+  inputButton[i].addEventListener("click", expression);
+}
 
-let add = document.getElementById("add");
-add.addEventListener("click", expression);
+let equals = document.getElementById("equals");
+equals.addEventListener("click", calculate);
 
-let multiply = document.getElementById("multiply");
-multiply.addEventListener("click", expression);
+let clear = document.getElementById("clear");
+clear.addEventListener("click", clearCalc);
 
-let equalButton = document.getElementById("equalButton");
-equalButton.addEventListener("click", calculate);
+// calculator functions and variables:
 
 let input = "";
+let output = document.getElementById("output");
+let x = "";
 
 function expression() {
-  input += this.innerHTML;
-  console.log(input);
+  if (input===0){
+    input= "";}
+  input += this.value;
+  output.innerHTML=input;
+  console.log("input=" + input);
 }
 
 function calculate() {
-  console.log(eval(input));
+  if (input.includes("SQUARE")){
+    let x = input.slice(6);
+    input=Math.sqrt(x);
+    console.log(input);
+    output.innerHTML=input;
+  } else {
+  input=eval(input);
+  console.log("calculation=" + eval(input));
+  output.innerHTML=input;
+  }
 }
 
-// getResult();
-
-// console.log(mathProblem);
+function clearCalc() {
+  input = 0;
+  output.innerHTML=input;
+}
