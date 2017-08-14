@@ -1,25 +1,3 @@
-/*div {
-  width: 50px;
-  height: 50px;
-  background: blue;
-  color: white;
-  text-align: center;
-  font-family: sans-serif;
-  margin: 5px;
-}
-
-#view {
-  background-color: white;
-  border: 1px solid blue;
-  width: 50px;
-  height: 50px;
-  color: blue;
-}*/
-body {
-  width: 100vh;
-  height: 100vw;
-}
-
 #wrapper {
   background-image: url("http://i01.i.aliimg.com/img/pb/793/131/268/1285036461876_hz-myalibaba-temp14_802.jpg");
   background-color: #cccccc;
